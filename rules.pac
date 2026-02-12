@@ -11,7 +11,7 @@ function FindProxyForURL(url, host) {
         shExpMatch(host, "*.amazon.com") ||
         dnsDomainIs(host, "amazon.in") ||
         shExpMatch(host, "*.amazon.in")) {
-        return "PROXY YOUR_PROXY_IP:YOUR_PROXY_PORT";
+        return "PROXY 192.168.1.13:3128; DIRECT";
     }
 
     // Everything else goes directly
