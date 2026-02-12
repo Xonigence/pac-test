@@ -3,7 +3,7 @@ function FindProxyForURL(url, host) {
     // Flipkart domains
     if (dnsDomainIs(host, "flipkart.com") ||
         shExpMatch(host, "*.flipkart.com")) {
-        return "PROXY YOUR_PROXY_IP:YOUR_PROXY_PORT";
+        return "192.168.1.13:3128; ";
     }
 
     // Amazon domains
@@ -11,7 +11,7 @@ function FindProxyForURL(url, host) {
         shExpMatch(host, "*.amazon.com") ||
         dnsDomainIs(host, "amazon.in") ||
         shExpMatch(host, "*.amazon.in")) {
-        return "PROXY 192.168.1.13:3128; DIRECT";
+        return "DIRECT";
     }
 
     // Everything else goes directly
