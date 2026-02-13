@@ -1,6 +1,6 @@
 function FindProxyForURL(url, host) {
 
-  // Flipkart → bypass VPN + proxy
+  //  bypass VPN + proxy
   if (shExpMatch(host, "*.indiahikes.com")) {
       return "DIRECT";
   }
