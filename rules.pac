@@ -6,5 +6,5 @@ function FindProxyForURL(url, host) {
   }
 
   // Everything else → go to proxy
-  return "PROXY 10.0.0.7:8080";
+  return "PROXY mobile.skyhigh.cloud:8080";
 }
