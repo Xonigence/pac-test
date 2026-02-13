@@ -1,7 +1,7 @@
 function FindProxyForURL(url, host) {
 
   //  bypass VPN + proxy
-  if (shExpMatch(host, "*.indiahikes.com") || shExpMatch(host, "*.flipkart.com") ) {
+  if (shExpMatch(host, "*.indiahikes.com") || shExpMatch(host, "*.flipkart.com") || shExpMatch(host, "*.cricbuzz.com") ) {
       return "DIRECT";
   }
 
