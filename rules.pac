@@ -1,10 +1,10 @@
-function FindProxyForURL(url, host) {
+unction FindProxyForURL(url, host) {
 
-  // Flipkart → bypass VPN + bypass proxy
-  if (dnsDomainIs(host, "flipkart.com") || shExpMatch(host, "*.flipkart.com")) {
+  // Flipkart bypass
+  if (shExpMatch(host, "*.flipkart.com")) {
       return "DIRECT";
   }
 
-  // Everything else → go to proxy
-  return "PROXY 192.168.1.13:3128";
+  // Everything else goes to proxy
+  return "PROXY 10.213.139.151:3128";
 }
