@@ -1,10 +1,10 @@
 function FindProxyForURL(url, host) {
 
-  //  bypass VPN + proxy
-  if (shExpMatch(host, "*.indiahikes.com") || shExpMatch(host, "*.flipkart.com") || shExpMatch(host, "*.cricbuzz.com") ) {
+  // Flipkart → bypass VPN + bypass proxy
+  if (dnsDomainIs(host, "flipkart.com") || shExpMatch(host, "*.flipkart.com")) {
       return "DIRECT";
   }
 
   // Everything else → go to proxy
-  return "PROXY mobile.skyhigh.cloud:8080";
+  return "PROXY 192.168.1.13:3128";
 }
