@@ -6,5 +6,5 @@ function FindProxyForURL(url, host) {
   }
 
   // Everything else goes to proxy
-  return "PROXY 10.213.139.151:8080";
+  return "PROXY 10.42.6.23:8090";
 }
