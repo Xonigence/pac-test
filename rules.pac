@@ -1,4 +1,4 @@
-unction FindProxyForURL(url, host) {
+function FindProxyForURL(url, host) {
 
   // Flipkart bypass
   if (shExpMatch(host, "*.flipkart.com")) {
