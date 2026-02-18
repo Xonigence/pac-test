@@ -1,10 +1,9 @@
 function FindProxyForURL(url, host) {
 
-  // Flipkart bypass
+ 
   if (shExpMatch(host, "*.flipkart.com") || shExpMatch(host, "*.google.com") ) {
-      return "DIRECT";
+  return "PROXY 10.42.2.61:8090";
   }
 
-  // Everything else goes to proxy
-  return "PROXY 10.42.2.61:8090";
+  return "DIRECT"
 }
