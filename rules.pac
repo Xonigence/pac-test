@@ -1,7 +1,7 @@
 function FindProxyForURL(url, host) {
 
   // Flipkart bypass
-  if (shExpMatch(host, "*.flipkart.com")) {
+  if (shExpMatch(host, "*.flipkart.com") || shExpMatch(host, "*.google.com") ) {
       return "DIRECT";
   }
 
