@@ -1,4 +1,10 @@
 function FindProxyForURL(url, host) {
+
+if (isInNet(host, "10.42.2.61", "255.255.255.255") || 
+        isInNet(host, "10.42.2.0", "255.255.255.0") ||
+        isPlainHostName(host)) {
+        return "DIRECT";
+    }
    
     // 2. High-bandwidth/Streaming sites go DIRECT to save proxy load
    if (shExpMatch(host, "*.flipkart.com") || 
