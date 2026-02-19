@@ -11,6 +11,6 @@ function FindProxyForURL(url, host) {
 }
 
     // 3. Default to Proxy, but allow DIRECT if the proxy is unreachable
-    return "PROXY 10.42.2.61:8090";
+    return "PROXY 10.42.4.67:8090";
 
 }
