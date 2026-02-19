@@ -1,4 +1,3 @@
-function FindProxyForURL(url, host) {
-   // Adding the dot at the end prevents search domain appending
-   return "PROXY mwg-internal.wgcs-mowgli-preprod.svc.cluster.local.:8090";
+FindProxyForURL(url, host) {
+    return "PROXY 10.42.4.67:8090";
 }
