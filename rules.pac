@@ -1,9 +1,13 @@
- function FindProxyForURL(url, host) {
-                        // If we got here, we are already inside the tunnel.
-                        // Now decide if we need the Bangalore gateway.
-                        if ((shExpMatch(host, ".flipkart.com")) || (shExpMatch(host, ".youtube.com")) || (shExpMatch(host, ".hotstar.com")) || (shExpMatch(host, ".ndtv.com"))){
-                            return "DIRECT"; // Inside VPN, but no proxy needed
-                        }
-                        return "PROXY 10.42.2.61:8090";
-                    }
-//changes
+function FindProxyForURL(url, host) {
+   
+    // 2. High-bandwidth/Streaming sites go DIRECT to save proxy load
+    if (shExpMatch(host, "*.flipkart.com") || 
+        shExpMatch(host, "*.youtube.com") || 
+        shExpMatch(host, "*.hotstar.com") || 
+        shExpMatch(host, "*.ndtv.com")) {
+        return "DIRECT";
+    }
+
+    // 3. Default to Proxy, but allow DIRECT if the proxy is unreachable
+    return "PROXY 10.42.2.61:8090";
+}
