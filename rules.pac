@@ -6,7 +6,7 @@ function FindProxyForURL(url, host) {
         shExpMatch(host, "*.youtube.com")  || shExpMatch(host, "youtube.com")  ||
         shExpMatch(host, "*.hotstar.com")  || shExpMatch(host, "hotstar.com")
     ) {
-        return "PROXY 10.42.2.66:8090";
+        return "PROXY 10.42.3.159:8080";
     }
 
     // Default: Connect directly to the internet
