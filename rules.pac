@@ -2,7 +2,7 @@ function FindProxyForURL(url, host) {
     
     // Check for specific shopping and streaming domains
     if (
-        shExpMatch(host, "*.flipkart.com") || shExpMatch(host, "flipkart.com") ||
+        shExpMatch(host, "*.netflix.com") || shExpMatch(host, "netflix.com") ||
         shExpMatch(host, "*.youtube.com")  || shExpMatch(host, "youtube.com")  ||
         shExpMatch(host, "*.hotstar.com")  || shExpMatch(host, "hotstar.com")
     ) {
