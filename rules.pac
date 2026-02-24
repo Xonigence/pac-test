@@ -22,11 +22,7 @@ unction FindProxyForURL(url, host) {
         return "DIRECT";
     }
 
-    // 3. DIRECT: Internal/Local traffic
-    if (isPlainHostName(host)) {
-        return "DIRECT";
-    }
 
-    // 4. PROXY: Everything else goes via the IPsec Tunnel
+    //PROXY: Everything else goes via the IPsec Tunnel
     return "PROXY 10.42.2.66:8090";
 }
